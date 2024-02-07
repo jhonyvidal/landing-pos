@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import BaseButton from "../../components/base/Button";
 import BaseSection from "../../components/base/Section";
 import LandingListItem from "../../components/landing/ListItem";
 
 function CartOnlineSection() {
+    const navigate = useNavigate();
+    function goTocontact(){
+        navigate('/contact', { replace: true })
+    }
 
     return(
         <section className="w-full my-36">
@@ -33,7 +38,7 @@ function CartOnlineSection() {
             </LandingListItem>
             <LandingListItem title="Api para integraciones"> </LandingListItem>
             </ul>
-            <BaseButton style="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base">
+            <BaseButton onClick={goTocontact} style="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base">
              Pruebalo Gratis
             </BaseButton>
         </div>

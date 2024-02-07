@@ -8,6 +8,6 @@
 //   ? ''
 //   : process.env.NX_BASE_URL_DEV;
 
-  export const BASE_URL = 'https://debugploy.bot-appliance.site/';
+  export const BASE_URL = 'https://pos.lukis.blog/services/server.php/api';
   export const EMAIL = 'admin@admin.com';
   export const PASSWORD = 'admin';

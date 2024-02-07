@@ -1,6 +1,8 @@
 import React from "react";
 import NavLink from "../NavLink";
 import { ReactComponent as Logo } from "../../assets/img/logo/nefa.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -10,33 +12,31 @@ const Footer = () => {
           <div className="md:w-full lg:w-full w-full sm:w-1/2 xl:w-fit flex flex-col sm:flex-row sm:px-6 py-6 sm:py-12 sm:space-x-10 sm:border-r-0 border-[#DDDDDD]">
             <div className="sm:hidden xl:block mb-6 sm:mb-0">
               <a href="#">
-                <Logo className="w-24 -mt-2"/>
+                <img src={require(`../../assets/img/logo/logo.png`)}
+                    style={{width:'100px'}}
+                    alt=""
+                />
               </a>
             </div>
             <ul className="space-y-4">
-              <NavLink name="Cryptocurrency" url="#" />
-              <NavLink name="Exchanges" url="#" />
-              <NavLink name="Watchlist" url="#" />
-              <NavLink name="Portfolio" url="#" />
-              <NavLink name="NFT" url="#" />
+              <NavLink name="Restaurantes" url="#" />
+              <NavLink name="Bares" url="#" />
+              <NavLink name="Cafeterias" url="#" />
+
             </ul>
           </div>
           <div className="md:w-full lg:w-full lg:border-r w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t xl:border-r border-[#DDDDDD]">
             <ul className="space-y-4">
-              <NavLink name="Products" url="#" />
-              <NavLink name="About Us" url="#" />
-              <NavLink name="Careers" url="#" />
-              <NavLink name="Blog" url="#" />
-              <NavLink name="Security" url="#" />
+              <NavLink name="Tiendas" url="#" />
+              <NavLink name="Pizzerias" url="#" />
+              <NavLink name="Almacenes" url="#" />
             </ul>
           </div>
           <div className="md:w-full md:border-t lg:w-full w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t-0 sm:border-r-0 border-[#DDDDDD]">
             <ul className="space-y-4">
-              <NavLink name="Help Center" url="#" />
-              <NavLink name="Contact Us" url="#" />
-              <NavLink name="System Status" url="#" />
-              <NavLink name="Area of Avaibility" url="#" />
-              <NavLink name="Privacy Policy" url="#" />
+              <NavLink name="Call Center" url="#" />
+              <NavLink name="Contacto" url="#" />
+              <NavLink name="Soporte" url="#" />
             </ul>
           </div>
           <div className="md:w-full md:border-t lg:w-full sm:px-10 py-6 sm:py-12 w-full sm:w-1/2 xl:w-[22rem] space-y-4 sm:border-t border-[#DDDDDD]">
@@ -44,7 +44,7 @@ const Footer = () => {
               Noticias
             </h5>
             <p className="text-sm text-[#666666] focus:outline-none focus:shadow-outline">
-              Mantente siempre actualizado<br className="sm:hidden" />
+              Mantente siempre actualizado <br className="sm:hidden" />
               de las ultimas novedades de Drovi
             </p>
             <div className="flex items-center space-x-2">
@@ -72,8 +72,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-8 sm:py-4 text-center text-sm text-[#666666] hover:text-gray-900">
-        &copy; Copyright 2022 NEFA LLC. All rights reserved
+        &copy; Copyright 2024 Debugploy. All rights reserved
       </div>
+      <a className="btn-wsp" href="https://api.whatsapp.com/send?phone=+573135959528" target="_blank">
+          {/* <i className="fa fa-whatsapp icono"></i> */}
+          <FontAwesomeIcon icon={faWhatsapp} />
+      </a>
     </footer>
   );
 };

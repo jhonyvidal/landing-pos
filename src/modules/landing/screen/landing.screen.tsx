@@ -13,6 +13,7 @@ import HeroSection from "../../../sections/landing/HeroSection";
 
 function LandingScreen() {
 
+
   return (
     <div className="App">
       <DefaultLayout>
@@ -40,7 +41,7 @@ function LandingScreen() {
         {/* <!-- Partners section --> */}
         <PartnerSection/>
 
-        <div className="w-full my-10 flex justify-center">
+        {/* <div className="w-full my-10 flex justify-center">
           <a
             data-aos="flip-down"
             data-aos-delay="150"
@@ -61,8 +62,8 @@ function LandingScreen() {
               />
             </svg>
           </a>
-        </div>
-        
+        </div> */}
+
       </DefaultLayout>
     </div>
   );

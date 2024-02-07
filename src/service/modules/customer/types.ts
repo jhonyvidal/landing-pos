@@ -4,9 +4,9 @@ export type ResponseAuth = {
 };
 
 export type customerRequest = {
-    name:string,
-    phone:string,
-    email:string,
-    message:string
+    nombre:string,
+    telefono:string,
+    correo:string,
+    negocio:string
 }
   

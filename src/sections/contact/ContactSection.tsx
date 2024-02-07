@@ -5,6 +5,7 @@ import { postCustomer } from "../../service/modules/customer/customers";
 import { useState } from "react";
 import type {MaskitoOptions} from '@maskito/core';
 import {useMaskito} from '@maskito/react';
+import Loading from "../../components/base/Loading";
 
 
 const digitsOnlyMask: MaskitoOptions = {
@@ -24,26 +25,25 @@ function ContactSection() {
 
     const [responseSuccess, setResponseSuccess] = useState<boolean>(false);
     const [responseError, setResponseError] = useState<boolean>(false);
+    const [isloading, setIsloading] = useState<boolean>(false);
+    
 
     const {register, formState: {errors}, reset, getValues} = useForm({
      mode: "onChange"
     });
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-
+        setIsloading(true);
         const { name, phone, email, message } = getValues();
-        const formDataContact = { name, phone, email, message }
-        console.log(formDataContact);
-        
+        console.log(phone);
         event.preventDefault();
-        const responseData = await postCustomer(formDataContact);
+        const responseData = await postCustomer({ nombre:name, telefono: phone, correo: email, negocio:message});
       
-        if (responseData.status === 201) {
+        if (responseData.status === 200) {
+          setIsloading(false);
           setResponseSuccess(true);
-          setTimeout(() => {
-            setResponseSuccess(false);
-          }, 3000);
         }else{
+          setIsloading(false);
           setResponseError(true);
           setTimeout(() => {
             setResponseError(false);
@@ -51,6 +51,12 @@ function ContactSection() {
         }
         reset();
       };
+
+    if(isloading){
+        return(
+            <Loading/>
+        )
+    }
       
 
     return(
@@ -59,7 +65,7 @@ function ContactSection() {
             <div className="col-span-12 lg:col-span-6 sm:hidden mb-8">
                 <div className="w-full">
                 <img
-                    src={require("../../assets/img/buy-and-trade.webp")}
+                    src={require("../../assets/img/faq_img.png")}
                     className="mt-4 sm:-mt-4"
                     alt=""
                 />
@@ -71,7 +77,7 @@ function ContactSection() {
             >
                 <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
                 En pocos minutos<br className="hidden sm:block" />
-                Puedes probar Drovi
+                Puedes tener tu Demo
                 </h2>
                 <p className="paragraph">
                 Registra<span className="text-header-gradient"> Tus datos, obtendras una prueba gratuita por 15 dias</span>
@@ -110,19 +116,19 @@ function ContactSection() {
                             <input
                                 style={{ marginTop: '3px', marginBottom:'10px'}}
                                 minLength={13}
-                                type="text"
+                                type="number"
                                 className="w-full px-2 py-4 sm:py-3 rounded-lg sm:rounded-md text-sm focus:outline-none border border-[#AAAAAA] placeholder-[#888]"
                                 placeholder="Ingresa tu teléfono"
                                 required
                                 {...register('phone', {required: true})}
-                                ref={inputRef}
+                                // ref={inputRef}
                             />
                             <BaseButton style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">
                                 COMENZAR AHORA
                             </BaseButton>
                             <div className="items-center">
                                 {responseSuccess &&
-                                    <span className="text-header-gradient">Tus datos, fueron recibidos exitosamente a tu correo te enviaremos el link</span>
+                                    <span className="text-header-gradient">our data has been received successfully. We have contact soon.</span>
                                 }
                                 {responseError &&
                                     <span className="text-header-red ">Ha occurido un error</span>
@@ -136,9 +142,9 @@ function ContactSection() {
                 className="col-span-12 lg:col-span-6 hidden sm:block"
                 v-bind="$attrs"
             >
-                <div className="w-full">
+                <div className="w-full mt-10">
                 <img
-                    src={require("../../assets/img/buy-and-trade.webp")}
+                    src={require("../../assets/img/faq_img.png")}
                     className="mt-4 sm:-mt-4"
                     alt=""
                 />

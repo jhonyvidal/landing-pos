@@ -1,6 +1,11 @@
 import BaseButton from "../../components/base/Button";
 
 function ModernSystemSection() {
+
+    const openWP = () => {
+        window.open("https://api.whatsapp.com/send?phone=+573135959528", "_blank");
+    }
+    
     return(
         <section className="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
         <div className="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
@@ -26,7 +31,7 @@ function ModernSystemSection() {
                 Simple y Sencillo
             </h4>
             <p className="paragraph text-sm xl:text-base">
-                Ofrecemos una interfaz moderna, amigable y fácil de usar.
+                Ofrecemos una interfaz moderna, amigable y fácil de usar
             </p>
             </div>
             <div className="space-y-2">
@@ -44,8 +49,14 @@ function ModernSystemSection() {
             Disponible 24/7.
             </p>
             </div>
+            <div className="space-y-2">
+            <h4 className="text-lg font-medium">Negocio en movimiento</h4>
+            <p className="paragraph text-sm xl:text-base">
+            Nuestro POS móvil te permite vender donde quieras, cuando quieras
+            </p>
+            </div>
             <div className="flex flex-col sm:flex-row">
-            <BaseButton style="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
+            <BaseButton  onClick={openWP} style="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
                 Empezar Ahora
             </BaseButton>
             <BaseButton style="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full hover:shadow-none">

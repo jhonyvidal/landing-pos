@@ -5,24 +5,29 @@ function FaqSection() {
 
     const accordions = [
         {
-          title: "Porque deberia escoger?",
+          title: "Porque deberia escoger Drovi?",
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "Con nuestro Drovi, transformamos la gestión de tu negocio en una experiencia eficiente y sin complicaciones. Ofrecemos herramientas poderosas que simplifican las operaciones diarias, potencian las ventas y proporcionan insights valiosos. Elije la excelencia, elige Drovi para impulsar tu negocio hacia el éxito.",
         },
         {
-          title: "Modulos de la aplicación?",
+          title: "Como Empiezo a usar Drovi",
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "Es muy sencillo e intuituvo solo debes ingresar usuario, contraseña y nosostros nos encargamos del resto.",
         },
         {
           title: "Metodos de pago?",
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "Con Drovi puedes realizar ventas por cualquier medio de pago, Efectivo , Trajetas de debito credito y tranferencias.",
         },
         {
           title: "Como reportar un problema?",
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "Puedes comunicarte con nuestro canal de soporte 3135959528, se te asignara un ticket y en menos de los que imaginas tu problema estara resuelto.",
+        },
+        {
+          title: "Es drovi un sistema confiable?",
+          description:
+            "Confía en nuestro Drovi, respaldado por una sólida reputación de innovación y compromiso con la excelencia. Garantizamos seguridad, fiabilidad y un soporte excepcional. Convierte tus desafíos en oportunidades y deja que nuestra tecnología confiable potencie tu negocio. La confianza se construye con resultados, y nosotros entregamos resultados excepcionales.",
         },
       ];
 
@@ -36,7 +41,7 @@ function FaqSection() {
             >
               <div className="w-full">
                 <img
-                  src={require("../../assets/img/faq.webp")}
+                  src={require("../../assets/img/faq_img.png")}
                   className="w-full"
                   alt=""
                 />

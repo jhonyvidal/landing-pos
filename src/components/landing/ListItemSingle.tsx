@@ -8,7 +8,7 @@ interface propsTypes {
 const ListItemSingle: React.FC<propsTypes> = ({ title }) => {
 
 return (
-    <div className="flex items-center space-x-2 ">
+    <div className="flex items-center space-x-2 text-center">
         {/* <CheckCircleIcon :size="20" class="text-[#0c66ee]" /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"

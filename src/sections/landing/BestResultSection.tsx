@@ -1,9 +1,23 @@
+import { useState } from "react";
 import BaseButton from "../../components/base/Button";
 import BaseSection from "../../components/base/Section";
 import LandingExchange from "../../components/landing/Exchange";
+import Modal from "../../components/base/modal";
+import ModalContainer from "../../modules/landing/container/modalSection";
+import TypedComponent from "../../components/landing/Typed";
 
 
 function BestResultSection() {
+
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => {
+      setModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setModalOpen(false);
+    };
 
     const currencies = [
         {
@@ -44,33 +58,23 @@ function BestResultSection() {
             </div>
             <div
                 data-aos="fade-right"
-                className="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4"
+                className="col-span-12 lg:col-span-6 mt-4 xl:mt-10 space-y-6 px-4"
             >
                 <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
                 Obtienes <br className="hidden sm:block" />
-                Mejores Resultados
+                Mejores <span className="text-header-gradient"><TypedComponent type={2}/></span> 
                 </h2>
                 <p className="paragraph">
                 Registra<span className="text-header-gradient"> Ventas, Gastos, Stock e Insumos</span>
                 </p>
                 <div className="space-y-6 lg:pr-12">
-                <LandingExchange
-                    title="Amount"
-                    name="amount"
-                    type="number"
-                    defaultValue="5.000"
-                    exchangeSelected={currencySelected}
-                    exchanges={currencies}
-                />
-                <LandingExchange
-                    title="Get"
-                    name="get"
-                    type="number"
-                    defaultValue="0.10901"
-                    exchangeSelected={cryptoSelected}
-                    exchanges={cryptocurrencies}
-                />
-                <BaseButton style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">
+                <p className="paragraph">  
+                Eleva la experiencia de compra con Drovi: Pagos rápidos, programas de fidelidad, y servicio personalizado.
+                </p>
+                <p className="paragraph"> 
+                Impulsa tu tienda con Drovi: Control total de inventario, promociones efectivas, y análisis de ventas.
+                </p>
+                <BaseButton onClick={openModal} style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">
                    Comprar Aquí
                 </BaseButton>
                 </div>
@@ -80,15 +84,18 @@ function BestResultSection() {
                 className="col-span-12 lg:col-span-6 hidden sm:block"
                 v-bind="$attrs"
             >
-                <div className="w-full">
+                <div className="w-full mt-10">
                 <img
-                    src={require("../../assets/img/buy-and-trade.webp")}
-                    className="mt-4 sm:-mt-4"
+                    src={require("../../assets/img/sistema-pos.jpg")}
+                    className="mt-4 sm:-mt-4 rounded-lg"
                     alt=""
                 />
                 </div>
             </div>
             </BaseSection>
+            <Modal isOpen={modalOpen} onClose={closeModal}>
+             <ModalContainer/>
+            </Modal>
         </section>
     )
 }

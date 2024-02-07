@@ -9,14 +9,14 @@ export const postCustomer = async (
   reqData: customerRequest
 ): Promise<ApiResponse<ResponseAuth>> => {
   try {
-    const token = await postUserLogin({
-      data: { email: EMAIL, password: PASSWORD },
-    });
+    // const token = await postUserLogin({
+    //   data: { email: EMAIL, password: PASSWORD },
+    // });
 
     const { data, status } = await base.post<ResponseAuth>(
-      "/Leads/Lead",
+      "/customer",
       reqData,
-      { headers: { Authorization: `Bearer ${token.response?.access_token}` } }
+      // { headers: { Authorization: `Bearer ${token.response?.access_token}` } }
     );
     return {
       response: data,

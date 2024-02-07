@@ -14,6 +14,13 @@ const Navbar = () => {
   function goToHome(){
     navigate('/', { replace: true })
   }
+  function goTocontact(){
+    navigate('/contact', { replace: true })
+  }
+  function handledClick(){
+    // window.location.href = "https://pos.lukis.blog/";
+    window.open("https://pos.lukis.blog/", "_blank");
+  }
   return (
     <nav id="navbar" className="relative z-10 w-full text-neutral-800">
       <div className="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-4">
@@ -71,8 +78,8 @@ const Navbar = () => {
               open ? "flex" : "hidden lg:flex"
             } w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0`}
           >
-            <NavLink name="Precios" url="#" />
-            <NavLink name="Modulos" url="#" />
+            <NavLink name="Precios" url="/#pricingSection" />
+            <NavLink name="Modulos" url="modules" />
             <NavLink name="Contato" url="contact" />
             <NavLink name="FAQ" url="#" />
             {/* <div className="flex items-center justify-normal">
@@ -93,10 +100,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className={`${open ? "flex" : "hidden lg:flex"} space-x-3`}>
-          <BaseButton style="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]" >
+          <BaseButton onClick={handledClick} style="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]" >
             Iniciar Sesión
           </BaseButton>
-          <BaseButton style="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
+          <BaseButton onClick={goTocontact} style="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
             Probar Gratis
           </BaseButton>
         </div>

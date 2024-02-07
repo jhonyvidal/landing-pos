@@ -1,13 +1,23 @@
 import React from 'react';
 import Typed from 'typed.js';
 
-function TypedComponent() {
+interface MyComponentProps {
+  type: number;
+}
+
+function TypedComponent(props: MyComponentProps) {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null);
-
+  let dataString = [''];
+  if(props.type === 1){
+    dataString = ["Los Pedidos", "Las ventas", "El estock", "Los Gastos", "Los Informes"]
+  }else if (props.type === 2){
+    dataString = ["Resultados", "Ventas", "Tiempos de entrega", "Servicios"]
+  }
+ 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Los Pedidos", "Las ventas", "El estock", "Los Gastos", "Los Informes"],
+      strings: dataString,
       typeSpeed: 70,
       backSpeed: 70,
       backDelay: 200,
