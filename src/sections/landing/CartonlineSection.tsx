@@ -10,7 +10,8 @@ function CartOnlineSection() {
     }
 
     return(
-        <section className="w-full my-36">
+        // <section className="w-full my-36">
+        <section className="w-full mb-36">
         <BaseSection data-aos="fade-down">
         <div className="col-span-12 lg:col-span-7">
             <div className="w-full">

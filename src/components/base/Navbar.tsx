@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as Logo } from "../../assets/img/logo/nefa.svg";
 import NavLink from "../NavLink";
 import BaseButton from "./Button";
@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [open, setOpen] = useState<Boolean>(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const navigate = useNavigate();
 
   function toggleSidebar() {
@@ -21,14 +23,29 @@ const Navbar = () => {
     // window.location.href = "https://pos.lukis.blog/";
     window.open("https://pos.lukis.blog/", "_blank");
   }
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav id="navbar" className="relative z-10 w-full text-neutral-800">
+    <nav id="navbar" className={`z-10 w-full text-neutral-800 bg-white ${scrollPosition > 0 && 'fixed shadow-sm'}`}>
+    {/* <nav id="navbar" className={`z-10 w-full text-neutral-800 bg-white`}> */}
       <div className="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-4">
         <div className="flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
           <div className="w-full flex flex-row items-center justify-between py-6">
             <div>
               {/* <Logo /> */}
-              <div onClick={goToHome}>
+              <div className="cursor-hover" onClick={goToHome}>
                 <img src={require(`../../assets/img/logo/logo.png`)}
                     style={{width:'160px'}}
                     alt=""

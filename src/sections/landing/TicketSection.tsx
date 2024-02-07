@@ -2,7 +2,8 @@ import LandingListItem from "../../components/landing/ListItem";
 
 function TicketSection() {
     return(
-        <section className="w-full my-24">
+        // <section className="w-full my-24">
+        <section className="w-full mb-24">
             <div className="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
             <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
                 <div className="w-full">

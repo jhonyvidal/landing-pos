@@ -46,7 +46,8 @@ function PricingSection() {
       ];
 
     return(
-        <section className="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden" id="pricingSection">
+        // <section className="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden" id="pricingSection">
+        <section className="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 mb-24 mt-24 shadow sm:rounded-2xl overflow-hidden" id="pricingSection">
           <div className="w-full py-16 flex flex-col items-center">
           <h2
               data-aos="flip-down"

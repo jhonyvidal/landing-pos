@@ -7,7 +7,8 @@ function ModernSystemSection() {
     }
     
     return(
-        <section className="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
+        // <section className="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
+        <section className="bg-trading-tools relative max-w-full sm:mx-4 mb-24 mt-24 py-16 shadow rounded-2xl overflow-hidden">
         <div className="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <div className="col-span-12 lg:col-span-6 sm:hidden">
             <div className="w-full sm:mt-20 xl:mt-0">

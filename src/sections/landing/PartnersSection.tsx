@@ -2,7 +2,8 @@
 
 function PartnerSection() {
     return(
-        <section className="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
+        // <section className="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
+        <section className="bg-partner relative max-w-full sm:mx-6 mb-24 mt-24 shadow sm:rounded-2xl overflow-hidden">
           <div className="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
             <h3
               data-aos="flip-down"

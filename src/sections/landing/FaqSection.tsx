@@ -32,7 +32,8 @@ function FaqSection() {
       ];
 
     return(
-        <section className="w-full my-24">
+        // <section className="w-full my-24">
+        <section className="w-full mb-24 mt-24">
           <BaseSection>
             <div
               data-aos="fade-right"
