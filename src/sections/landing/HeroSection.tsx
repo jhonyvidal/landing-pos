@@ -26,7 +26,7 @@ function HeroSection() {
     return(
         <section id="hero" className="w-full pb-24">
             <BaseSection>
-            <div className="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
+            <div className="header-padding col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
                 <span
                 data-aos="fade-right"
                 data-aos-once="true"
@@ -80,7 +80,7 @@ function HeroSection() {
                 </BaseButton>
                 </div>
             </div>
-            <div className="hidden sm:block col-span-12 lg:col-span-6">
+            <div className="header-padding hidden sm:block col-span-12 lg:col-span-6">
                 <div className="w-full mt-10">
                 <img
                     data-aos="fade-up"

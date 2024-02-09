@@ -18,10 +18,10 @@ function LandingScreen() {
     <div className="App">
       <DefaultLayout>
         {/* <!-- Hero section --> */}
-        {/* <HeroSection/> */}
+        <HeroSection/>
 
         {/* <!-- Cart section --> */}
-        {/* <CartOnlineSection/> */}
+        <CartOnlineSection/>
 
         {/* <!-- Best Result section --> */}
         <BestResultSection/>
