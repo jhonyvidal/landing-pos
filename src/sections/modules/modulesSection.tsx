@@ -62,12 +62,12 @@ function ModulesSection() {
       ];
 
     return(
-        <section className="w-full my-24">
+        <section className="w-full mb-24">
           <BaseSection>
             <div
               data-aos="fade-right"
               data-aos-delay="150"
-              className="col-span-12 lg:col-span-6"
+              className="header-padding col-span-12 lg:col-span-6"
             >
               <div className="w-full">
                 <img
@@ -80,7 +80,7 @@ function ModulesSection() {
             <div
               data-aos="fade-left"
               data-aos-delay="150"
-              className="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8"
+              className="header-padding col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8"
             >
               <span className="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">
                 más por menos

@@ -60,9 +60,9 @@ function ContactSection() {
       
 
     return(
-        <section className="w-full my-0">
+        <section className="w-full mb-24">
             <BaseSection>
-            <div className="col-span-12 lg:col-span-6 sm:hidden mb-8">
+            <div className="header-padding col-span-12 lg:col-span-6 sm:hidden mb-8">
                 <div className="w-full">
                 <img
                     src={require("../../assets/img/faq_img.png")}
@@ -73,7 +73,7 @@ function ContactSection() {
             </div>
             <div
                 data-aos="fade-right"
-                className="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4"
+                className="header-padding col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4"
             >
                 <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
                 En pocos minutos<br className="hidden sm:block" />
@@ -139,7 +139,7 @@ function ContactSection() {
             </div>
             <div
                 data-aos="fade-left"
-                className="col-span-12 lg:col-span-6 hidden sm:block"
+                className="header-padding col-span-12 lg:col-span-6 hidden sm:block"
                 v-bind="$attrs"
             >
                 <div className="w-full mt-10">
