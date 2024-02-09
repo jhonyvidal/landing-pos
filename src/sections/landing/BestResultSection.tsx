@@ -62,8 +62,8 @@ function BestResultSection() {
                     className="col-span-12 lg:col-span-6 mt-4 xl:mt-10 space-y-6 px-4"
                 >
                     <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
-                    Obtienes <br className="hidden sm:block" />
-                    Mejores <span className="text-header-gradient"><TypedComponent type={2}/></span> 
+                    Obtienes Mejores <br  />
+                    <span className="text-header-gradient text-3xl md:text-4xl"><TypedComponent type={2}/></span> 
                     </h2>
                     <p className="paragraph">
                     Registra<span className="text-header-gradient"> Ventas, Gastos, Stock e Insumos</span>
