@@ -24,7 +24,7 @@ function LandingScreen() {
         {/* <CartOnlineSection/> */}
 
         {/* <!-- Best Result section --> */}
-        {/* <BestResultSection/> */}
+        <BestResultSection/>
 
         {/* <!-- Ticket section --> */}
         {/* De aquí hacia arriba se daña */}
